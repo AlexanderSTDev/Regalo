@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    html {
+        @apply scroll-smooth scroll-pt-24;
+    }
+
+    .wrapper {
+        @apply w-[90%] mx-auto overflow-hidden;
+    }
+
+    .cargar-ventana {
+        @apply fixed top-0 inset-0 z-[100] bg-black/50 duration-300;
+    }
+
+    /* Tabs */
+    .active-tab {
+        @apply text-black;
+     }
+  
+     .pestana {
+        display: none;
+        animation: moving .5s ease;
+     }
+  
+     @keyframes moving {
+        from {
+           transform: translateY(20%);
+           opacity: 0;
+        }
+        to {
+           transform: translateY(0);
+           opacity: 1;
+        }
+     }
+  
+     .active-pestanas {
+        @apply block;
+     }
+}
